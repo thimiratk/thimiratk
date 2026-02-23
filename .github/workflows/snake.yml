@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -16,7 +18,7 @@ jobs:
         uses: Platane/snk@master
         id: snake-gif
         with:
-          github_user_name: thimira-kodithuwakku
+          github_user_name: thimiratk
           svg_out_path: dist/github-contribution-grid-snake.svg
 
       - name: Push to Output Branch
